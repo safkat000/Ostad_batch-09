@@ -1,141 +1,71 @@
-# Django Todo App
+# Todo App
 
-A complete Todo web application built with Django, featuring a modern UI with Tailwind CSS.
+This is a simple todo application built with Django. It lets you create tasks, mark them as done, and delete them. You can also filter tasks by their status. The app has a clean and simple interface that works on both desktop and mobile.
 
-## Features
+This project was made as part of an assignment to learn how to deploy a web application.
 
-- ✅ Create, Read, Update, and Delete tasks
-- ✅ Mark tasks as completed/active
-- ✅ Filter tasks by status (All, Active, Completed)
-- ✅ Set due dates for tasks
-- ✅ Add descriptions to tasks
-- ✅ AJAX toggle completion without page reload
-- ✅ Beautiful, responsive UI with Tailwind CSS
-- ✅ Django messages framework for user feedback
+## How to Run Locally
 
-## Tech Stack
+Make sure you have Python 3.8 or higher installed on your computer before starting.
 
-- **Backend**: Python + Django
-- **Frontend**: Django Templates + Tailwind CSS (via CDN)
-- **Database**: SQLite (for local development)
-- **JavaScript**: Minimal JS for enhanced UX (toggle completion)
-
-## Setup Instructions
-
-### Prerequisites
-
-- Python 3.8 or higher
-- pip (Python package manager)
-
-### Installation
-
-1. **Clone or navigate to the project directory:**
-   ```bash
-   cd /path/to/todo_project
-   ```
-
-2. **Create a virtual environment (recommended):**
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Run migrations:**
-   ```bash
-   python manage.py migrate
-   ```
-
-5. **Create a superuser (optional, for admin access):**
-   ```bash
-   python manage.py createsuperuser
-   ```
-
-6. **Run the development server:**
-   ```bash
-   python manage.py runserver
-   ```
-
-7. **Open your browser and navigate to:**
-   ```
-   http://127.0.0.1:8000/
-   ```
-
-## Project Structure
+1. Clone this repository:
 
 ```
-todo_project/
-├── manage.py
-├── requirements.txt
-├── README.md
-├── db.sqlite3          # SQLite database (created after migrate)
-├── todo_project/       # Project settings
-│   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py
-│   ├── wsgi.py
-│   └── asgi.py
-├── tasks/              # Tasks app
-│   ├── __init__.py
-│   ├── models.py       # Task model
-│   ├── views.py        # CRUD views
-│   ├── forms.py        # Task form
-│   ├── urls.py         # App URLs
-│   ├── admin.py
-│   ├── tests.py        # Unit tests
-│   └── migrations/     # Database migrations
-└── templates/          # HTML templates
-    ├── base.html
-    └── tasks/
-        ├── task_list.html
-        ├── task_form.html
-        └── task_confirm_delete.html
+git clone https://github.com/safkat000/Ostad_batch-09.git
+cd Ostad_batch-09
 ```
 
-## Usage
+2. Create a virtual environment and activate it:
 
-### Creating a Task
-
-1. Click the "+ New Task" button on the task list page
-2. Fill in the task title (required)
-3. Optionally add a description and due date
-4. Click "Create Task"
-
-### Managing Tasks
-
-- **View Tasks**: All tasks are displayed on the home page
-- **Filter Tasks**: Use the tabs (All/Active/Completed) to filter tasks
-- **Toggle Completion**: Click "Mark Complete" or "Mark Active" to toggle task status
-- **Edit Task**: Click the "Edit" button to modify a task
-- **Delete Task**: Click the "Delete" button and confirm deletion
-
-### Admin Interface
-
-Access the Django admin panel at `http://127.0.0.1:8000/admin/` (requires superuser account).
-
-## Running Tests
-
-```bash
-python manage.py test
+```
+python -m venv venv
+venv\Scripts\activate
 ```
 
-## Development
+On Mac or Linux use this instead:
 
-### Making Changes
+```
+source venv/bin/activate
+```
 
-1. **Model Changes**: After modifying `models.py`, run:
-   ```bash
-   python manage.py makemigrations
-   python manage.py migrate
-   ```
+3. Install the required packages:
 
-2. **Static Files**: This project uses Tailwind CSS via CDN, so no static file collection is needed for development.
+```
+pip install -r requirements.txt
+```
 
-## License
+4. Run the database migrations:
 
-This project is open source and available for educational purposes.
+```
+python manage.py migrate
+```
 
+5. Start the development server:
+
+```
+python manage.py runserver
+```
+
+6. Open your browser and go to:
+
+```
+http://127.0.0.1:8000/
+```
+
+The app should be running now. You can start adding tasks from there.
+
+## Live Application
+
+The app is deployed and publicly available at:
+
+**https://ostad-batch-09.onrender.com**
+
+Note: The app is hosted on Render free tier, so it may take about 30 seconds to load if it has been idle.
+
+## Tech Used
+
+- Python and Django for the backend
+- SQLite for the database
+- Tailwind CSS (loaded from CDN) for styling
+- Gunicorn as the web server for production
+- Render for hosting
