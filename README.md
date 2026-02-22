@@ -58,7 +58,7 @@ The app should be running now. You can start adding tasks from there.
 
 The app is deployed and publicly available at:
 
-**https://ostad-batch-09.onrender.com**
+**https://ostad-batch-09-flnl.onrender.com**
 
 Note: The app is hosted on Render free tier, so it may take about 30 seconds to load if it has been idle.
 
